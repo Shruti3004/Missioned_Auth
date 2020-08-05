@@ -19,7 +19,7 @@ function Login(props) {
         firebase.login(email, password)
         .then(() => {
             if(currentUser.emailVerified){
-                props.history.push('/products')
+                props.history.push('/home')
             }else{
                 firebase.logout();                
             }        
